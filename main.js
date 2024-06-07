@@ -92,6 +92,18 @@ autoUpdater.on('download-progress', (progressObj) => {
 })
 autoUpdater.on('update-downloaded', (info) => {
   sendStatusToWindow('Update downloaded');
+//   下载完成后执行 关闭所有窗口并退出
+  /*app.quit();
+  // 通过命令行重新启动应用程序
+  require('child_process').spawn(process.execPath, process.argv.slice(1), {
+    cwd: process.cwd(),
+    detached: true,
+    stdio: 'ignore'
+  });
+  // 退出父进程
+  process.exit(0);*/
+  console.log(process.execPath, process.argv.slice(1),'213');
+  autoUpdater.quitAndInstall();
 });
 app.on('ready', function() {
   // Create the Menu

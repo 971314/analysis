@@ -1,8 +1,8 @@
 {
   "name": "analysis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "main.js",
-  "description": "electron-updater example project",
+  "description": "",
   "author": "Matt Haggard",
   "scripts": {
     "publish": "electron-builder -p always"
