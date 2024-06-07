@@ -1,6 +1,6 @@
 {
-  "name": "electron-updater-example",
-  "version": "0.8.1",
+  "name": "analysis",
+  "version": "1.0.0",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
@@ -17,8 +17,10 @@
     "electron-updater": "^4.3.9"
   },
   "build": {
-    "appId": "com.github.iffy.electronupdaterexample",
+    "appId": "com.github.971314.analysis",
+    "productName": "analysis",
     "afterSign": "./build/notarize.js",
+    "copyright": "1.0.1",
     "mac": {
       "category": "your.app.category.type"
     },
@@ -26,11 +28,20 @@
       "target": "nsis"
     },
     "nsis": {
-      "oneClick": false
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     },
     "linux": {
       "category": "your.app.category.type",
       "target": "AppImage"
-    }
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "971314",
+        "repo": "analysis",
+        "releaseType": "release"
+      }
+    ]
   }
 }
